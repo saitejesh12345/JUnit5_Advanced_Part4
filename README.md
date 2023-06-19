@@ -31,17 +31,16 @@ load Spring Application Context.** None of these annotation will **never been us
 
 # Integration Testing
 
-**->** If we need to test for **GetUsersMethod()**  method is Properly Integrated with SpringFramework, & if it works well in SpringWeb Layer,we do not want to isolate or getUsers Method Completely,we do want some of Sprint Framework features to be available to us but only through Controller Layer/WebLayer.
+**->** If we need to test for **GetUsersMethod()**  method is Properly Integrated with SpringFramework, & **if it works well in SpringWeb Layer,we do not want to isolate or getUsers Method Completely** ,we do want some of Sprint Framework features to be available to us but only through Controller Layer/WebLayer.
 
-**->** For Example we do want to test and Make Sure that **GetUsersMethod()** can be Triggered by Http get request and that it can be read Http  request parameters by Controller Layer,In this case we want annotations like **@RestController or @GetMapping or @Requestmapping** to be enabled and to work. Spring Framework Allows to test Each layer Seperately ,If we want to test COntroller,**Service and DAO will not be needed**,Spring Framework will create Spring application COntext for Only Controller Layer.
+**->** For Example we do want to test and Make Sure that **GetUsersMethod()** can be Triggered by **Http get request and that it can be read Http  request parameters by Controller Layer** ,In this case we want annotations like **@RestController or @GetMapping or @Requestmapping** to be enabled and to work. Spring Framework Allows to test Each layer Seperately ,If we want to test COntroller,**Service and DAO will not be needed**,Spring Framework will create Spring application COntext for Only Controller Layer.
 
-**->** Those beans which are related to webLayer will be Created and loaded into Spring Application Context.Beans that are related to DAO layer and Service layer will not be Created and Loaded into Application COntext.Becoz of other layer not tested and not loaded or involved Each Single layer will get tested/run fast.
+**->** Those beans which are related to webLayer will be Created and loaded into Spring Application Context.**Beans that are related to DAO layer and Service layer will not be Created and Loaded into Application COntext**.Becoz of other layer not tested and not loaded or involved Each Single layer will get tested/run fast.
 
 **->** With all Layer Integrated,we will write a test Method that is called **Integration test or Acceptance Test**,And for this test to work,we will need all three layers
 Integrated and we will not use any Test Doubles.**We will not create Any Mock Objects and We will not create any Fake Objects**
 
-**->** The WebLayer which we write test ,Http request will be handled and Bean validation will be Performed.And the Service layer,a real production version of our code will
-be executed and in data layer Actual Communication of database will be Performed. **So NO MOCKING of any Layer or Any Objects will be done**.
+**->** The WebLayer which we write test ,**Http request will be handled and Bean validation will be Performed.** And the Service layer,a real production version of our code will be executed and in data layer Actual Communication of database will be Performed. **So NO MOCKING of any Layer or Any Objects will be done**.
 
-**->** Even though our Real web Server will not be Started by default,we Can still test Our code Integrated with all layers.But if needed we can load our SpringBoot application with Embedded Server we can make it run on random SPecific PORT Number.
+**->** Even though our Real web Server will not be Started by default,we Can still test Our code Integrated with all layers.But **if needed we can load our SpringBoot application with Embedded Server we can make it run on random SPecific PORT Number.**
  
