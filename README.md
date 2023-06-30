@@ -43,4 +43,30 @@ Integrated and we will not use any Test Doubles.**We will not create Any Mock Ob
 **->** The WebLayer which we write test ,**Http request will be handled and Bean validation will be Performed.** And the Service layer,a real production version of our code will be executed and in data layer Actual Communication of database will be Performed. **So NO MOCKING of any Layer or Any Objects will be done**.
 
 **->** Even though our Real web Server will not be Started by default,we Can still test Our code Integrated with all layers.But **if needed we can load our SpringBoot application with Embedded Server we can make it run on random SPecific PORT Number.**
- 
+
+
+ # What you'll learn?
+
+ **In this course, you will learn how to write Unit tests and Integration tests in BDD style for Spring Boot applications   using JUnit 5, Mockito, AssertJ, Hamcrest, JsonPath.**
+
+**1.** Learn to write industry-standard Unit and Integration tests in BDD (Behaviour Driven Development) style using Spring Boot Starter Test dependency from scratch
+
+**2.** Learn how to use BDD (Behaviour Driven Development) format that is given/when/then to write Unit tests.
+
+**3.** Learn to Unit test the Spring boot application Repository layer
+
+**4.** Learn to Unit test the Spring boot application Service layer
+
+**5.** Learn to Unit test the Spring boot application Controller layer
+
+**6.** Learn how to do Integration testing for the Spring boot application.
+
+**7.** Learn how to do Integration testing using Testcontainers // very important
+
+**8.** You will learn to use the most important Unit Testing ANNOTATIONS - @SpringBootTest, @WebMvcTest, @DataJpaTest, and @MockBean
+
+**9.** Use ALL the FRAMEWORKS in Spring Boot Starter Test - JUnit, Spring Test, Spring Boot Test, AssertJ, Hamcrest, Mockito, JSONassert, and JsonPath.
+
+**10.** You will learn to write Unit tests using Mocks and Stubs created with Mockito
+
+**11.** Learn how to use Mockito annotations to create mock objects.
